@@ -19,5 +19,5 @@ finance-tracker/
 │   └── test_cli.py
 └── data/               - Default location for CSV files
     └── transactions.csv
-  _
+  __
 """
