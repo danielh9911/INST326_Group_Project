@@ -21,3 +21,35 @@ finance-tracker/
     └── transactions.csv
   __
 """
+
+import sys
+import argparse
+
+class financeTracker:
+    
+    def __init__(self):
+        pass
+
+def main():
+    pass
+
+def parse_args(arglist):
+
+    """ 
+    Parse command-line arguments.
+
+    Args:
+        arglist (list of str): list of arguments from the command line.
+
+    Returns:
+        namespace: the parsed arguments, as returned by
+                   argparse.ArgumentParser.parse_args().
+    """
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("path", help="file of financial information")
+    return parser.parse_args(arglist)
+
+if __name__ == "__main__":
+    args = parse_args(sys.argv[1:])
+    main(args.path)
