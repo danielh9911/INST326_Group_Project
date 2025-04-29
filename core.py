@@ -1,6 +1,6 @@
 from typing import List
 from datetime import datetime
-from .models import Transaction  # Import from your models
+from .models import Transaction
 
 class FinanceTracker:
     
