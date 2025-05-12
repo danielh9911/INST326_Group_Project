@@ -11,5 +11,5 @@ class Transaction:
     date: datetime
     amount: float
     category: str
-    description: str = ""
     type: TransactionType
+    description: str = ""

@@ -1,12 +1,11 @@
-from typing import List
-from datetime import datetime
-from .models import Transaction
+from models import Transaction, TransactionType
 
 class FinanceTracker:
     
     def __init__(self):
         self.transactions = []                    # Initializes empty list if none provided
-    def add_transaction(self, transaction):
+
+    def add_transaction(self, transaction: Transaction):
         """adds transactions to history"""
         self.transactions.append(transaction)      # Stores in memory
     
@@ -16,7 +15,7 @@ class FinanceTracker:
         expenses = 0       # Initializes counters
         for t in self.transactions:              # Loops through all transactions
             if t.date.month == month and t.date.year == year:   # Filters by date
-                if t.type == 'income':
+                if t.type == TransactionType.INCOME:
                     income += t.amount
                 else:
                     expenses += t.amount
