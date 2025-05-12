@@ -1,3 +1,6 @@
+Personal Finance Tracker
+INST 326-0302 Final Project
+
 How to run:
 
 Windows
